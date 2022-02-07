@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div className="App">
         <Header/>
-        <Main/>
+        <Main cardInfo={cardInfo}/>
         <Footer/>
     </div>
   );

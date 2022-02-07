@@ -2,9 +2,12 @@ import React from "react";
 import Card from "./Card/Card"
 import './Main.css'
 
-const Main = () => {
+const Main = (props) => {
+
+
+
   return <main>
-      <Card/>
+      <Card cardInfo = {props}/>
   </main>;
 };
 
