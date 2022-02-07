@@ -4,9 +4,14 @@ import { Markup } from "interweave";
 
 const Card = (props) => {
 
+  
   const cardInfo = props.cardInfo.cardInfo
+  console.log(cardInfo.move)
+  const page = cardInfo.move
 
-  console.log(cardInfo.options)
+  const handleChange = (page) =>{
+    props.handleChange(page)
+  }
 
   return <div className="card">
   <div className="card-main">
@@ -17,8 +22,11 @@ const Card = (props) => {
       <p className="cardText">{cardInfo.text}</p>
     </div>
     </div>
-    // <div className="cardAction" >
-    <Markup content={cardInfo.options} />      
+    <div className="cardAction" >
+{page?<button onClick={()=>{handleChange(page)}}>
+    <Markup content={cardInfo.options}/>
+    </button>:<></>}
+    
     </div>
   </div>
 };

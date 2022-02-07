@@ -7,7 +7,7 @@ const Main = (props) => {
 
 
   return <main>
-      <Card cardInfo = {props}/>
+      <Card cardInfo={props} handleChange={props.handleChange}/>
   </main>;
 };
 

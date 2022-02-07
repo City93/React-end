@@ -10,6 +10,8 @@ const objectSchema = {
     text: {type: String},
     img: {type: String},
     options: {type: String},
+    function: {type: String},
+    move: {type: String}
 };
 
 const cardInfoSchema = mongoose.Schema(objectSchema)
