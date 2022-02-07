@@ -6,7 +6,7 @@ const searchPage = async (req,res) =>{
         if (req.query.page) {
             //http://localhost:3000/game?page=1
 
-            const data = await CardInfo.find({page: "1"})
+            const data = await CardInfo.find({page: req.query.page})
             res.status(200).json(data)            
         }
     } catch (error){
